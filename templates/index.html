@@ -15,6 +15,7 @@
 {{ wtf.quick_form(form) }}
 
 <h2>Relação de usuários cadastrados</h2>
+<p>Quantidade: {{ user_all | length }}</p>
 <table class="table">
     <thead>
         <tr>
@@ -26,7 +27,7 @@
         {% for key in user_all %}
         <tr>
             <td>{{ key.username }}</td>
-            <td>{{ key.role.name }}</td>            
+            <td>{{ key.role.name }}</td>
         </tr>
         {% endfor %}
     </tbody>
